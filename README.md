@@ -2,7 +2,7 @@
 
 Site web de type blog (lecture d'articles)
 
-![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo2.png?raw=true)
+![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo.png?raw=true)
 
 ## Technologies utilisées : 
   - **Vue.js** pour la partie front-end 
@@ -31,9 +31,9 @@ Site web de type blog (lecture d'articles)
 - Système de commentaires et de like sur les articles (afin que les utilisateurs puissent communiquer entre eux et faire des retours)
 
 ## Plus d'images :
-![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/demo2.png?raw=true)
+![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo2.png?raw=true)
 
-![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/demo3.png?raw=true)
+![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo3.png?raw=true)
 
 
 Réalisé en binome avec Lucas CHARBONNIER
