@@ -8,7 +8,7 @@
 
     <p> 
         Made by 
-        <a href="https://alexiglnt.github.io/Portfolio/" target="_blank" >
+        <a href="https://github.com/alexiglnt" target="_blank" >
              Alexi GALLONET  <span class="material-symbols-outlined"> open_in_new </span> 
         </a> 
         and 
@@ -19,7 +19,7 @@
 
     <hr id="separator2">
 
-    <p> See GitHub repository  <a href="https://github.com/alexiglnt/Projet-Framework" target="_blank"> <i style="font-size:24px" class="fa">&#xf09b;</i> </a> </p>
+    <p> See GitHub repository  <a href="https://github.com/alexiglnt/Blog-API-Framework" target="_blank"> <i style="font-size:24px" class="fa">&#xf09b;</i> </a> </p>
 
 </template>
 
