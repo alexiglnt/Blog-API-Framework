@@ -25,4 +25,6 @@
 - Mise en page CSS (Dark Mode, animations avec GSAP, possibilité de changer le thème principal du site, etc...)
 - Système de commentaires et de like sur les articles (afin que les utilisateurs puissent communiquer entre eux et faire des retours)
 
-### Réalisé en binome avec Lucas CHARBONNIER
+
+
+##### Réalisé en binome avec Lucas CHARBONNIER
