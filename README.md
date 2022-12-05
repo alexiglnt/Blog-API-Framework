@@ -2,7 +2,7 @@
 
 Site web de type blog (lecture d'articles)
 
-![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/demo.png?raw=true)
+![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo2.png?raw=true)
 
 ## Technologies utilisées : 
   - **Vue.js** pour la partie front-end 
