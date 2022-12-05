@@ -29,4 +29,4 @@ Site web de type blog (lecture d'articles)
 
 
 
-#### Réalisé en binome avec Lucas CHARBONNIER
+Réalisé en binome avec Lucas CHARBONNIER
