@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/article.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+  </head>
+
+  <body>
+      <div class="loading">
+        <h1> Loading </h1>
+        <img src="src/assets/loader.png" class="loader" width="5%">
+      </div>
+
+    <div id="app"></div>
+
+    <script type="module" src="/src/main.js"></script>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+      window.addEventListener('load', () => {
+        document.querySelector('.loading').style.display = "none";
+      })
+    </script>
+  </body>
+
+
+  <style>
+
+    .loading {
+      background: var(--bg-color);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 999;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .loading h1 {
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--font-color);
+      letter-spacing: 3px;
+      font-family: var(--font-title);
+    }
+
+    .loading .loader {
+      display: block;
+      width: 200px;
+      animation: loader 1.3s infinite ease-in-out;
+    }
+
+    @keyframes loader {
+
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+  </style>
+
+</html>

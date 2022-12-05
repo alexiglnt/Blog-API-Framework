@@ -1,0 +1,40 @@
+{
+    "articles": [
+        {
+            "id": 1,
+            "title": "Test du nouveau téléphone mtah les fous",
+            "slug": "telephone-tah-fous",
+            "img": "https://droidsoft.fr/wp-content/uploads/2022/11/Xiaomi-12T-Pro-miniature-scaled.jpg",
+            "tags": "\"phone, android\"",
+            "category": "Actualités",
+            "content": "Vraiment un téléphooooooooooone quali quoi...",
+            "author": "spiut",
+            "createdAt": "2022-11-29T11:09:44.000Z",
+            "updatedAt": "2022-11-29T11:09:44.000Z"
+        },
+        {
+            "id": 2,
+            "title": "Test du nouveau téléphone mtah les fous",
+            "slug": "telephone-tah-dazdzadaz",
+            "img": "https://salope.com/image.png",
+            "tags": "\"phone, android\"",
+            "category": "Actualités",
+            "content": "Vraiment un téléphooooooooooone quali quoi...",
+            "author": "spiut",
+            "createdAt": "2022-11-29T11:10:55.000Z",
+            "updatedAt": "2022-11-29T11:10:55.000Z"
+        },
+        {
+            "id": 3,
+            "title": "Test du nouveau téléphone mtah les fous",
+            "slug": "telephone-tah-fezzefez",
+            "img": "http://salope.com/image.png",
+            "tags": "\"phone, android\"",
+            "category": "Actualités",
+            "content": "Vraiment un téléphooooooooooone quali quoi...",
+            "author": "spiut",
+            "createdAt": "2022-11-29T11:12:23.000Z",
+            "updatedAt": "2022-11-29T11:12:23.000Z"
+        }
+    ]
+}
