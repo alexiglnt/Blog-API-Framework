@@ -2,6 +2,8 @@
 
 Site web de type blog (lecture d'articles)
 
+![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/demo.png?raw=true)
+
 ## Technologies utilisées : 
   - **Vue.js** pour la partie front-end 
   - **Symfony** pour la partie back-end
