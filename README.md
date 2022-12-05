@@ -22,13 +22,14 @@ Site web de type blog (lecture d'articles)
 - Consulter tous les articles du site
 - Consulter les articles d'une catégorie en particulier 
 - Faire une recherche dans le site
+- Pouvoir se créer un compte
 - Pouvoir se connecter à un compte
 - Pouvoir sauvegarder un article en favoris
 - Accéder à un espace dédié aux administrateurs pour pouvoir créer de nouveaux articles
 
 ## BONUS
 - Mise en page CSS (Dark Mode, animations avec GSAP, loader au démarrage, possibilité de changer le thème principal du site, etc...)
-- Système de commentaires et de like sur les articles (afin que les utilisateurs puissent communiquer entre eux et faire des retours)
+- Système de commentaires et de likes sur les articles (afin que les utilisateurs puissent communiquer entre eux et faire des retours)
 
 ## Plus d'images :
 ![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo2.png?raw=true)
