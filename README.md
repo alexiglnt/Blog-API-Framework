@@ -1,5 +1,7 @@
 # Blog-API-Framework
 
+Site web de type blog (lecture d'articles)
+
 ## Technologies utilisées : 
   - **Vue.js** pour la partie front-end 
   - **Symfony** pour la partie back-end
