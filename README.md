@@ -30,6 +30,7 @@ Site web de type blog (lecture d'articles)
 ## BONUS
 - Mise en page CSS (Dark Mode, animations avec GSAP, loader au démarrage, possibilité de changer le thème principal du site, etc...)
 - Système de commentaires et de likes sur les articles (afin que les utilisateurs puissent communiquer entre eux et faire des retours)
+- WYSIWYG pour créer des articles dans la partie ADMIN ("What You See Is What You Get")
 
 ## Plus d'images :
 ![alt text](https://github.com/alexiglnt/Blog-API-Framework/blob/main/front/public/demo2.png?raw=true)
