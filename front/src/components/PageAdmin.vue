@@ -62,6 +62,9 @@
 
                 }
             },
+            goTo() {
+                this.$router.push({ name: 'ArticleEdition' });
+            },
             beforeEnter(el) {
                 el.style.opacity = 0;
                 el.style.transform = "translateY(-80px)";
@@ -100,6 +103,8 @@
     <transition-group appear @before-enter="beforeEnter" @enter="enter">
         <div :data-index="index" :key="1">
             <h1> Create Article </h1>
+
+            <button type="button" @click="goTo" > Article Edition </button>
 
             <div class="container">
 

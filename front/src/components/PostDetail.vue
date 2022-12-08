@@ -121,26 +121,78 @@ export default {
 			}
 			
 		},
+		// addLike() {
+		// 	const URL_get = `${instance.defaults.baseURL}/api/likes`;
+
+		// 	axios.get(URL_get)
+		// 	.then((response) => {
+		// 		const likes = response.data['hydra:member'];
+		// 		let cpt=0
+		// 		likes.forEach((like) => {
+		// 			if (like.articleId === this.post.id)
+		// 			{
+		// 				cpt++;
+		// 			}
+		// 		});
+		// 		this.numberOfLike = cpt;
+		// 		console.log("numberOfLike", this.numberOfLike);
+		// 	})
+
+
+		// 	const URL = `${instance.defaults.baseURL}/api/articles/${this.post.id}`;
+
+		// 	let nbLike = this.numberOfLike;
+
+		// 	axios.put(URL, {
+		// 		nbLike: nbLike++
+		// 	},
+		// 	{
+		// 		headers: {
+		// 			'Content-Type': 'application/json',
+		// 			'Authorization': `Bearer ${localStorage.getItem('token')}`
+		// 		}
+		// 	})
+
+		// 	// On rajoute 1 au nombre de like de l'article (seulement pour l'affichage sur la page pour l'actualisation)
+		// 	this.post.nb_like++;
+		// },
+		// removeLike() {
+		// 	const URL2 = `${instance.defaults.baseURL}/api/likes`;
+
+		// 	axios.get(URL2)
+		// 	.then((response) => {
+		// 		const likes = response.data['hydra:member'];
+		// 		let cpt=0
+		// 		likes.forEach((like) => {
+		// 			if (like.articleId === this.post.id)
+		// 			{
+		// 				cpt++;
+		// 			}
+		// 		});
+		// 		this.numberOfLike = cpt;
+		// 	})
+
+		// 	const URL = `${instance.defaults.baseURL}/api/articles/${this.post.id}`;
+
+		// 	let nbLike = this.numberOfLike;
+
+		// 	axios.put(URL, {
+		// 		nbLike: nbLike
+		// 	},
+		// 	{
+		// 		headers: {
+		// 			'Content-Type': 'application/json',
+		// 			'Authorization': `Bearer ${localStorage.getItem('token')}`
+		// 		}
+		// 	})
+
+		// 	// On enleve 1 au nombre de like de l'article (seulement pour l'affichage sur la page pour l'actualisation)
+		// 	this.post.nb_like--;
+		// },
 		addLike() {
-			const URL2 = `${instance.defaults.baseURL}/api/likes`;
-
-			axios.get(URL2)
-			.then((response) => {
-				const likes = response.data['hydra:member'];
-				let cpt=0
-				likes.forEach((like) => {
-					if (like.articleId === this.post.id)
-					{
-						cpt++;
-					}
-				});
-				this.numberOfLike = cpt;
-			})
-
-
 			const URL = `${instance.defaults.baseURL}/api/articles/${this.post.id}`;
 
-			let nbLike = this.numberOfLike;
+			let nbLike = this.post.nb_like + 1;
 
 			axios.put(URL, {
 				nbLike: nbLike
@@ -156,24 +208,9 @@ export default {
 			this.post.nb_like++;
 		},
 		removeLike() {
-			const URL2 = `${instance.defaults.baseURL}/api/likes`;
-
-			axios.get(URL2)
-			.then((response) => {
-				const likes = response.data['hydra:member'];
-				let cpt=0
-				likes.forEach((like) => {
-					if (like.articleId === this.post.id)
-					{
-						cpt++;
-					}
-				});
-				this.numberOfLike = cpt;
-			})
-
 			const URL = `${instance.defaults.baseURL}/api/articles/${this.post.id}`;
 
-			let nbLike = this.numberOfLike;
+			let nbLike = this.post.nb_like - 1;
 
 			axios.put(URL, {
 				nbLike: nbLike
@@ -191,41 +228,26 @@ export default {
 		addInfosLike() {
 			const URL = `${instance.defaults.baseURL}/api/likes`;
 
-			axios.get(URL)
-			.then((response) => {
-				const likes = response.data['hydra:member'];
-				likes.forEach((like) => {
-					if (like.articleId === this.post.id && like.userId === JSON.parse(localStorage.getItem('userInfos')).id) 
-					{
-						
-					}
-					else
-					{
-						axios.post(URL, {
-							articleId: this.post.id,
-							userId: JSON.parse(localStorage.getItem('userInfos')).id
-						})
-					}
-				});
+			axios.post(URL, {
+				articleId: this.post.id,
+				userId: JSON.parse(localStorage.getItem('userInfos')).id
 			})
-
-			
 		},
-		removeInfosLike() {
+		removeInfosLike() {	
 			const URL = `${instance.defaults.baseURL}/api/likes`;
 
 			axios.get(URL)
 			.then((response) => {
 				const likes = response.data['hydra:member'];
+
 				likes.forEach((like) => {
 					if (like.articleId === this.post.id && like.userId === JSON.parse(localStorage.getItem('userInfos')).id) 
 					{
 						const URL_delete = `${instance.defaults.baseURL}/api/likes/${like.id}`;
-						axios.delete(URL_delete);
+						axios.delete(URL_delete)
 					}
 				});
 			})
-			
 		},
 		recupInfosLike() {
 			this.changeDesignLike();
@@ -242,11 +264,13 @@ export default {
 			
 
 			if (this.isLiked === true) {
+				console.log('remove');
 				this.isLiked = false;
 				this.removeInfosLike();
 				this.removeLike();
 			}
 			else {
+				console.log('add');
 				this.isLiked = true;
 				this.addInfosLike();
 				this.addLike();
@@ -332,7 +356,11 @@ export default {
 		// On remonte en haut de la page
 		this.scrollToTop();
 
+		// On récupère l'origine de la page
 		this.comeFrom = localStorage.getItem('comeFrom');
+
+		// On set le contenu de l'article
+		document.getElementById("description").innerHTML = this.post.description;
 
 	},
 };
@@ -352,7 +380,8 @@ export default {
 
 		<hr>
 
-		<p id="description" v-if="post">{{ post.description }}</p>
+		<!-- <p id="description" v-if="post">{{ post.description }}</p> -->
+		<div class="description" id="description"></div>
 
 		<div class="end-article" >
 			<!-- Si on vient de la page Profil -->
@@ -392,6 +421,14 @@ export default {
 </template>
 
 <style scoped>
+
+	.description {
+		text-align:justify;
+		margin-top: 50px;
+		margin-bottom: 25px;
+		max-width: 900px;
+		word-wrap: break-word;
+	}
 
 	body {
 		color : var(--font-color) ;

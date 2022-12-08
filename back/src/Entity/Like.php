@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use App\Repository\LikeRepository;
+use ApiPlatform\Metadata\Delete;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\LikeRepository;
+use ApiPlatform\Metadata\ApiResource;
 
+#[Delete]
 #[ORM\Entity(repositoryClass: LikeRepository::class)]
 #[ORM\Table(name: '`like`')]
 #[ApiResource]

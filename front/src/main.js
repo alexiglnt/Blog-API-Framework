@@ -14,6 +14,7 @@ import ProfilUser from './components/ProfilUser.vue';
 import PageAdmin from './components/PageAdmin.vue';
 import Bookmarks from './components/Bookmarks.vue';
 import ArticleBookmark from './components/ArticleBookmark.vue';
+import ArticleEdition from './components/ArticleEdition.vue';
 
 import axios from 'axios';
 
@@ -31,9 +32,10 @@ const routes = [
 	{ path: '/login', component: Login, name: 'Login' },
 	{ path: '/Registration', component: Registration, name: 'Registration' },
 	{ path: '/ProfilUser', component: ProfilUser, name: 'Profil' },
-	{ path: '/Admin', component: PageAdmin, name: 'Admin' },
+	{ path: '/Admin', component: ArticleEdition, name: 'Admin' },
 	{ path: '/MyBookmarks', component: Bookmarks, name: 'My-Bookmarks' },
 	{ path: '/ArticleBookmark/:id', component: ArticleBookmark, name: 'Bookmark-Article', props: true },
+	{ path: '/ArticleEdition', component: ArticleEdition, name: 'ArticleEdition' }
 ];
 
 const router = createRouter({

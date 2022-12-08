@@ -149,8 +149,6 @@
 			<h1> List of Articles </h1>
 			
 			<!-- Si researchPosts est vide (le tableau contenant les post recherchés), alors on affiche tout les posts -->
-			
-			
 			<div v-if="research !== ''" >
 				<transition-group appear @before-enter="beforeEnter" @enter="enter">
 					<div v-for="post in researchPosts" >

@@ -62,3 +62,4 @@ security:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/users, roles: IS_AUTHENTICATED_FULLY, methods: [GET, PUT, DELETE, PATCH] }
         - { path: ^/api/article, roles: PUBLIC_ACCESS, methods: [GET] } # IS_AUTHENTICATED_FULLY
+        - { path: ^/api/likes, roles: PUBLIC_ACCESS, methods: [GET, DELETE, PUT, POST] } # IS_AUTHENTICATED_FULLY

@@ -34,6 +34,7 @@
 		// This function will be called when the component is mounted.
 		mounted() 
 		{
+			document.querySelector(`.content${this.post.id}`).innerHTML = this.post.description;
 		},
 	};
 </script>
@@ -47,7 +48,9 @@
 
 		<details open>
 			<summary @click="changeSummaryState" > {{ stateSummary }} description</summary>
-			<p>{{ post.description }}</p>
+			
+			<div :class="('content'+post.id)" ></div>
+
 		</details> <br>
 
 		<ButtonVue @click="clicked" text="Read article" icon="chevron_right" />

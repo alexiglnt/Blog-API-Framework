@@ -58,10 +58,13 @@
                         this.getArticles();
                     });
             },
-            readArticle(idPost) {
+            readArticle(data) {
+				// On place le post dans le local storage
+				localStorage.setItem('currentPost', JSON.stringify(data));
+
                 this.$router.push({
 					name: 'Article',
-					params: { id: idPost },
+					params: { id: data.id },
 				});
             }
         },
@@ -95,7 +98,7 @@
 	<h2 v-else > You have {{ this.listBookmarks.length }} bookmarks </h2>
 
     <div v-for="bookmark in listBookmarks" >
-		<PostItem :post="bookmark" textButton="Lire l'article" :handleClick="() => { readArticle(bookmark.id) }" />
+		<PostItem :post="bookmark" textButton="Lire l'article" :handleClick="() => { readArticle(bookmark) }" />
     </div>
 
 	<!-- <ScrollToUpBtn/> -->
